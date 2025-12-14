@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tausif Portfolio</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* COLORS */
+        :root {
+            --c1: #f0aabe;
+            --c2: #672d69;
+            --c3: #00eaff;
+            --dark: #07ee4c;
+        }
+
+        /* BODY */
+        body {
+            background: linear-gradient(135deg, var(--c1), var(--c2), var(--c3));
+            background-size: 300% 300%;
+            animation: bgShift 12s infinite ease-in-out;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        @keyframes bgShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* NAVIGATION */
+        nav {
+            width: 100%;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+
+        nav h2 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            list-style: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            color: var(--c3);
+            transform: translateY(-3px);
+        }
+
+        /* SECTION */
+        section {
+            padding: 110px 10%;
+            min-height: 100vh;
+        }
+
+        /* HOME */
+        #home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #home img {
+            margin-top: 50px;
+            height: 500px;
+            width: 350px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 12px 20px #0b0b0b;
+
+        }
+
+        #home-text h1 {
+            font-size: 45px;
+            font-weight: 800;
+        }
+
+        #home-text h1 span {
+            color: #00f0ff;
+        }
+
+        #home-text p {
+            margin-top: 10px;
+            font-size: 25px;
+            max-width: 800px;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .skills {
+            font-size: 25px;
+
+        }
+
+        .skills span {
+            margin-top: 10px;
+            font-size: 30px;
+            box-shadow: 0px 8px 12px rgb(221, 220, 220);
+            font-style: italic;
+            color: #ee0e0e;
+        }
+
+        /* CERTIFICATE */
+        #certificates h2,
+        #education h2,
+        #projects h2,
+        #contact h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #00eaff;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            transition: .3s;
+            text-align: center;
+        }
+
+        .cert-box:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-box img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #00eaff;
+        }
+
+        /* EDUCATION */
+        .edu {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-left: 5px solid #00eaff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* PROJECT */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,));
+            gap: 20px;
+        }
+
+        .project {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            transition: .3s;
+            height: 250px;
+
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        /* ANIMATION */
+        .fade {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:850px) {
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+
+        /* From */
+
+         
+
+#contact {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #00eaff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #00c8d6;
+}
+
+#message {
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h2>Tausif Portfolio</h2>
+        <ul>
+            <li onclick="scrollToSection('home')">Home</li>
+            <li onclick="scrollToSection('certificates')">Certificates</li>
+            <li onclick="scrollToSection('education')">Education</li>
+            <li onclick="scrollToSection('projects')">Projects</li>
+            <li onclick="scrollToSection('contact')">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="fade">
+        <div id="home-text">
+            <h1>Hi, I'm <span>Tausif Alam</span></h1>
+            <p>I am doing graduation from Cimage College Patna. I'm a Web Developer and Data Analyst who
+                enjoys solving real-world problems with code.</p>
+
+            <h1 class="skills"><span>Skills</span></h1>
+            <p class="skill">I work with Python, SQL, Excel, C, Linux, and GitHub to solve problems and build clean,
+                efficient
+                solutions.</p>
+        </div>
+        <img src="whiteGPT.jpeg" alt="Profile">
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="fade">
+        <h2>Certificates</h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-box">
+                <img src="Api.png" alt="Certificate 1">
+                <p>Python For Data Science</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="AWS Cimage - Copy.jpg" alt="Certificate 2">
+                <p>Google Cloud AWS</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="My SQL.jpg" alt="Certificate 3">
+                <p>PHP and MySQL</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="live.png" alt="Certificate 4">
+                <p>APIs with Node.js</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="css.jpeg" alt="Certificate 4">
+                <p>CSS from IIT Bombay</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="Excel.jpg" alt="Certificate 4">
+                <p>Advanced Data Analysis</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="pythone.jpeg" alt="Certificate 4">
+                <p>Python from IIT Bombay</p>
+            </div>
+
+            <div class="cert-box">
+                <img src="volunteer.jpeg" alt="Certificate 4">
+                <p>Volunteer in CIMAGE</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="fade">
+        <h2>Education</h2>
+
+        <div class="edu">
+            <h3>I completed my Play To 8std class | When i was chaild </h3>
+            <p>2014–2019 | Gayan Ganga public school</p>
+        </div>
+
+        <div class="edu">
+            <h3>i compleded my 9+10 class from government school | When i able to Uderstand book,mind,language </h3>
+            <p>2020-2022 | From My Village </p>
+        </div>
+
+        <div class="edu">
+            <h3>i compleded my 12th class from </h3>
+            <p>2020-2022 | (DBSD) Devraha Baba Shridhar Das Inter Collage </p>
+        </div>
+
+        <div class="edu">
+            <h3>I doing Graduation from Cimage Collage Patna | I want to gate collage placement in TCS </h3>
+            <p>2024-2027 | Cimage Collage Patna </p>
+        </div>
+
+        <div class="edu">
+            <h3>I earned a Certificate of Participation in Cloud Computing with AWS from CIMAGE Professional College,
+                gaining hands-on experience with AWS cloud services
+                 This workshop strengthened my technical skills through practical learning and real-world cloud
+                computing insights. ✔️
+            </h3>
+            <p> Cimage Collage Patna </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="fade">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+            <div class="project">Work on Realtime Data</div>
+            <div class="project">Student Dashboard</div>
+            <div class="project">Data Analysis Project</div>
+            <div class="project">E-commerce UI</div>
+        </div>
+    </section>
+
+    <!-- FROM -->
+
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+    </div>
+
+    <div class="form-group">
+      <label>OTP</label>
+      <input type="text" id="otp" placeholder="Enter OTP" required>
+    </div>
+
+    <button type="submit">Submit</button>
+    <p id="message"></p>
+  </form>
+</section>
+
+
+    <!-- FOOTER LIKE YOUR IMAGE -->
+    <footer style="width:100%; background:#000; color:#fff; padding:20px 10px; text-align:center;">
+        <p>© 2025 Tausif Alam | Owner: Tausif Alam</p>
+        <p>Address: Patna, Bihar - 800001</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+
+        const fadeElements = document.querySelectorAll('.fade');
+
+        function showOnScroll() {
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect().top;
+                if (rect < window.innerHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+        window.addEventListener("scroll", showOnScroll);
+        showOnScroll();
+    </script>
+
+</body>
+
+</html>
