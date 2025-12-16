@@ -185,7 +185,7 @@
         }
 
         /* PROJECT */
-        .project-grid {
+        /* .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -200,7 +200,33 @@
 
         .project:hover {
             transform: scale(1.05);
-        }
+        } */
+
+        .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
         /* CONTACT */
         .contact-info {
