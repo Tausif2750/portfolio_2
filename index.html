@@ -17,8 +17,8 @@
 
         /* COLORS */
         :root {
-            --c1: #f0aabe;
-            --c2: #672d69;
+            --c1: #f597b2;
+            --c2: #a633aa;
             --c3: #00eaff;
             --dark: #07ee4c;
         }
@@ -186,7 +186,7 @@
         /* PROJECT */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,));
+            grid-template-columns: repeat(auto-fit, minmax(250px, ));
             gap: 20px;
         }
 
@@ -202,6 +202,10 @@
         .project:hover {
             transform: scale(1.05);
         }
+
+
+
+
 
         /* ANIMATION */
         .fade {
@@ -229,66 +233,64 @@
 
         /* From */
 
-         
 
-#contact {
-  width: 100%;
-  padding: 40px 20px;
-}
 
-#contact h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+        #contact {
+            width: 100%;
+            padding: 40px 20px;
+        }
 
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  border-radius: 10px;
-}
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.form-group {
-  margin-bottom: 15px;
-}
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+        }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background: #00eaff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #000;
-  margin-top: 10px;
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
 
-button:hover {
-  background: #00c8d6;
-}
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #00eaff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #000;
+            margin-top: 10px;
+        }
 
-#message {
-  margin-top: 12px;
-  text-align: center;
-  font-weight: 600;
-}
+        button:hover {
+            background: #00c8d6;
+        }
 
-        
+        #message {
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -397,7 +399,7 @@ button:hover {
         <div class="edu">
             <h3>I earned a Certificate of Participation in Cloud Computing with AWS from CIMAGE Professional College,
                 gaining hands-on experience with AWS cloud services
-                 This workshop strengthened my technical skills through practical learning and real-world cloud
+                This workshop strengthened my technical skills through practical learning and real-world cloud
                 computing insights. ✔️
             </h3>
             <p> Cimage Collage Patna </p>
@@ -409,43 +411,82 @@ button:hover {
         <h2>Projects</h2>
 
         <div class="project-grid">
-            <div class="project">Work on Realtime Data</div>
-            <div class="project">Student Dashboard</div>
-            <div class="project">Data Analysis Project</div>
-            <div class="project">E-commerce UI</div>
-        </div>
+            <div class="project">
+
+                <h3>Air Ring Website</h3>
+                <h4 style="margin: 12px; padding: 23px;">I am developing an e-commerce website focused on earrings and
+                    fashion jewelry. The objective of
+                    this project is to build a clean, fast, and user-friendly platform where customers can easily
+                    explore different designs, view clear product details, and enjoy a smooth shopping experience.
+                    Currently, I am working on improving the UI/UX, adding product listings, setting up pricing, and
+                    implementing essential e-commerce features such as cart functionality, wishlist, and secure payment
+                    options. Along with this, I am focusing on performance optimization and mobile responsiveness to
+                    ensure the website is practical, scalable, and ready for real users—not just visually appealing but
+                    functionally strong as well.
+                </h4>
+
+            </div>
+
+            <div class="project">
+                <h3>Data Analysit </h3>
+                <h4 style="margin: 12px; padding: 12px;">I work as a freelancer where I handle data analysis projects
+                    end to end. My work includes
+                    collecting raw data, cleaning and filtering it to remove errors and inconsistencies, and
+                    transforming it into meaningful insights. I design **interactive dashboards** that clearly
+                    present key metrics and trends, helping clients make data-driven decisions. I focus on accuracy,
+                    clarity, and usability—so the final dashboards are not just visually clean, but actually useful
+                    for real business analysis and decision-making.
+                </h4>
+
+
+            </div>
+
+            <div class="project">
+                <h3>Wifi-Car </h3>
+                <h4 style="margin: 12px; padding: 12px;">I have built a Wi-Fi controlled car that can be operated using
+                    a mobile phone In this project a microprocessor/microcontroller is used as the main control
+                    unit, which receives commands over a Wi-Fi connection and processes them in real time. The car uses
+                    DC motors for movement, allowing it to move forward, backward, left, and right based on user
+                    input. This project demonstrates practical skills in embedded systems, wireless communication, and
+                    motor control, and shows how hardware and software can be integrated to create a real-time
+                    remote-controlled system.
+
+                </h4>
+
+                <!-- <div class="project">E-commerce UI</div> -->
+            </div>
     </section>
 
     <!-- FROM -->
 
-<section id="contact" class="fade">
-  <h2>Contact</h2>
+    <section id="contact" class="fade">
+        <h2>Contact</h2>
 
-  <form id="contactForm" class="contact-form">
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-    </div>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-    </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-    <div class="form-group">
-      <label>Password</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
-    </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
 
-    <div class="form-group">
-      <label>OTP</label>
-      <input type="text" id="otp" placeholder="Enter OTP" required>
-    </div>
+            <div class="form-group">
+                <label>OTP</label>
+                <input type="text" id="otp" placeholder="Enter OTP" required>
+            </div>
 
-    <button type="submit">Submit</button>
-    <p id="message"></p>
-  </form>
-</section>
+            <button type="submit">Submit</button>
+            <p id="message"></p>
+        </form>
+    </section>
 
 
     <!-- FOOTER LIKE YOUR IMAGE -->
@@ -472,6 +513,12 @@ button:hover {
         window.addEventListener("scroll", showOnScroll);
         showOnScroll();
     </script>
+
+
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, reiciendis! Minus iste temporibus labore velit
+    corrupti maiores quaerat quae incidunt asperiores illo! Molestias tempore dignissimos quo hic reprehenderit, qui
+    incidunt.
 
 </body>
 
